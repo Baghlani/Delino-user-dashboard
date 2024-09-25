@@ -1,11 +1,12 @@
 @import "./reset.scss";
+@import "./font.scss";
 
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+h1 {
+  font-weight: 600;
 }
-
 h3 {
   margin-bottom: 2rem;
+  font-weight: 400;
 }
 
 .container {
@@ -20,8 +21,55 @@ h3 {
   min-width: 800px;
 }
 
-.user-detail {
-  width: 75vw;
-  margin: 0;
+.user-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.user-details ul {
+  flex: 1;
+  margin: 0px;
   padding: 0.25rem 0;
+  list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+  .user-details {
+    flex-direction: column;
+    // 60px is the width of the padding and margin
+    max-width: calc(100vw - 110px);
+  }
+  .user-details ul {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.user-details ul li.user-details-heading-1 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.user-details ul span.user-details-heading-2 {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.user-details ul li {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.user-details > div {
+  flex: 1;
+}
+
+.map-container {
+  width: 100%;
+  min-height: 300px;
+  max-height: 330px;
+}
+
+.k-map .k-layer {
+  width: 100%;
 }

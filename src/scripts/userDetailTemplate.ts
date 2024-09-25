@@ -1,19 +1,23 @@
 export const userDetailTemplate = kendo.template(`
-  <ul class="user-detail">
-    <li>Address:
+  <div class="user-details">
+  <ul>
+    <li class="user-details-heading-1">Address
       <ul>
-        <li>Street: #: kendo.htmlEncode(address.street) #</li>
-        <li>Suite: #: kendo.htmlEncode(address.suite) #</li>
-        <li>City: #: kendo.htmlEncode(address.city) #</li>
-        <li>Zipcode: #: kendo.htmlEncode(address.zipcode) #</li>
+        <li> <span class="user-details-heading-2">Street:</span> #: kendo.htmlEncode(address.street) #</li>
+        <li> <span class="user-details-heading-2">Suite:</span> #: kendo.htmlEncode(address.suite) #</li>
+        <li> <span class="user-details-heading-2">City:</span> #: kendo.htmlEncode(address.city) #</li>
+        <li> <span class="user-details-heading-2">Zipcode:</span> #: kendo.htmlEncode(address.zipcode) #</li>
       </ul>
     </li>
-    <li>Company: 
+    <li class="user-details-heading-1">Company
       <ul>
-        <li>Name: #: kendo.htmlEncode(company.name) #</li>
-        <li>Catch Phrase: #: kendo.htmlEncode(company.catchPhrase) #</li>
-        <li>Business Description: #: kendo.htmlEncode(company.bs) #</li>
+        <li> <span class="user-details-heading-2">Name:</span> #: kendo.htmlEncode(company.name) #</li>
+        <li> <span class="user-details-heading-2">Catch Phrase:</span> #: kendo.htmlEncode(company.catchPhrase) #</li>
+        <li> <span class="user-details-heading-2">Business Description:</span> #: kendo.htmlEncode(company.bs) #</li>
       </ul>
     </li>
   </ul>
+  <div id="map#:id#" class="map-container" style="width: 100%; height: 300px;">
+  </div>
+  </div>
 `);

@@ -1,3 +1,4 @@
+import renderMap from "./renderMap";
 import { User } from "./types/User.interface";
 import { userDetailTemplate } from "./userDetailTemplate";
 
@@ -14,6 +15,7 @@ export default (data: User[], pageSize: number = 10) => {
       { field: "website", title: "Website" },
     ],
     detailTemplate: userDetailTemplate,
+    detailInit: renderMap,
     pageable: true,
     sortable: true,
     filterable: true,
