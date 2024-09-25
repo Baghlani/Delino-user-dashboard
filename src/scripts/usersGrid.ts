@@ -1,8 +1,12 @@
+import { User } from "./types/User.interface";
 import { userDetailTemplate } from "./userDetailTemplate";
 
-export default (dataSource: kendo.data.DataSource) => {
+export default (data: User[], pageSize: number = 10) => {
   $("#UsersGrid").kendoGrid({
-    dataSource: dataSource,
+    dataSource: new kendo.data.DataSource({
+      data: data,
+      pageSize: pageSize,
+    }),
     columns: [
       { field: "name", title: "Name" },
       { field: "email", title: "Email" },
