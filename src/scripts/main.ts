@@ -17,7 +17,6 @@ $(async () => {
     initUsersGrid(dataSource, 10);
   } catch (error) {
     loadingIndicator!.hide();
-    console.log(error);
-    $("<div>").text("Error fetching data").appendTo("#UsersGrid");
+    $("<div>").text("An error occurred while loading the data.").appendTo("#UsersGrid");
   }
 });
