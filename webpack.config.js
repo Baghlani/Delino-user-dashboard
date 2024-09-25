@@ -8,7 +8,9 @@ module.exports = {
   devtool: "source-map",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    filename: "[name].bundle.js",
+    chunkFilename: "[name].chunk.js",
+    clean: true,
   },
   resolve: {
     extensions: [".ts", ".js"],
@@ -39,6 +41,9 @@ module.exports = {
   optimization: {
     minimize: true,
     minimizer: [new TerserPlugin()],
+    splitChunks: {
+      chunks: "all",
+    },
   },
   devServer: {
     static: {
@@ -46,5 +51,9 @@ module.exports = {
     },
     compress: true,
     port: 9000,
+  },
+  performance: {
+    hints: false,
+    maxAssetSize: 2000000,
   },
 };
