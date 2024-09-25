@@ -7,10 +7,11 @@ This project is a User Management Dashboard built using Kendo UI and TypeScript.
 - Fetches user data from an external API.
 - Displays data in a Kendo Grid.
 - Supports pagination, sorting, filtering, and scrolling.
-- Detailed view for each user.
+- Detailed view for each user, including a map based on their location.
 - Optimized and minified assets.
 - Code splitting and chunking for better performance.
-- Kendo Grid scripts are loaded only when data fetching is successful, reducing initial load size.
+- Scripts are lazy-loaded to be downloaded only when needed, reducing initial load size.
+- Fully responsive.
 
 ## Installation
 
