@@ -1,3 +1,5 @@
+import { userDetailTemplate } from "./userDetailTemplate";
+
 export default (dataSource: kendo.data.DataSource) => {
   $("#UsersGrid").kendoGrid({
     dataSource: dataSource,
@@ -7,6 +9,7 @@ export default (dataSource: kendo.data.DataSource) => {
       { field: "phone", title: "Phone" },
       { field: "website", title: "Website" },
     ],
+    detailTemplate: userDetailTemplate,
     pageable: true,
     sortable: true,
     filterable: true,
