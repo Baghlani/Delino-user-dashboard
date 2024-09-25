@@ -8,10 +8,8 @@ export const getData = async (url: string, pageSize: number = 5) => {
     });
   });
 
-  const dataSource = new kendo.data.DataSource({
+  return new kendo.data.DataSource({
     data: data,
     pageSize: pageSize,
   });
-
-  return { data, dataSource };
 };

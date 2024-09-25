@@ -7,6 +7,6 @@ import initUsersGrid from "./usersGrid";
 const USERS_ENDPOINT = "https://jsonplaceholder.typicode.com/users";
 
 $(async () => {
-  const { data, dataSource } = await getData(USERS_ENDPOINT, 10);
+  const dataSource = await getData(USERS_ENDPOINT, 10);
   initUsersGrid(dataSource);
 });
