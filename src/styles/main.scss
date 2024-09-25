@@ -73,3 +73,10 @@ h3 {
 .k-map .k-layer {
   width: 100%;
 }
+
+#loading {
+  z-index: 999;
+  margin: 0 auto;
+  display: block;
+  width: fit-content;
+}
