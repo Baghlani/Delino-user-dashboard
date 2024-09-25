@@ -10,5 +10,12 @@ h3 {
 
 .container {
   margin: 1rem auto;
+  padding: 0 1rem;
   max-width: 1200px;
+}
+
+#UsersGrid .k-grid-header-wrap > table,
+#UsersGrid .k-grid-content table,
+#UsersGrid .k-virtual-scrollable-wrap table {
+  min-width: 600px;
 }
