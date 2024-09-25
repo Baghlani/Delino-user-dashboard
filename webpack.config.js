@@ -1,17 +1,18 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   entry: "./src/scripts/main.ts",
-  devtool: "inline-source-map",
+  devtool: "source-map",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
   },
   resolve: {
     extensions: [".ts", ".js"],
-    mainFields: ["module", "main", "browser"],
+    mainFields: ["module", "main"],
   },
   module: {
     rules: [
@@ -35,6 +36,10 @@ module.exports = {
       template: "./src/index.html",
     }),
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+  },
   devServer: {
     static: {
       directory: path.join(__dirname, "dist"),
