@@ -1,5 +1,5 @@
 export const userDetailTemplate = kendo.template(`
-  <ul>
+  <ul class="user-detail">
     <li>Address:
       <ul>
         <li>Street: #: kendo.htmlEncode(address.street) #</li>
