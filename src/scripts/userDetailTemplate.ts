@@ -11,8 +11,8 @@ export const userDetailTemplate = kendo.template(`
     <li>Company: 
       <ul>
         <li>Name: #: kendo.htmlEncode(company.name) #</li>
-        <li>CatchPhrase: #: kendo.htmlEncode(company.catchPhrase) #</li>
-        <li>Bs: #: kendo.htmlEncode(company.bs) #</li>
+        <li>Catch Phrase: #: kendo.htmlEncode(company.catchPhrase) #</li>
+        <li>Business Description: #: kendo.htmlEncode(company.bs) #</li>
       </ul>
     </li>
   </ul>
